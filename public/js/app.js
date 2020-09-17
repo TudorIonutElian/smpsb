@@ -1980,6 +1980,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -37639,7 +37658,7 @@ var staticRenderFns = [
             _c("ul", { staticClass: "navbar-nav mr-auto" }, [
               _c("li", { staticClass: "nav-item active" }, [
                 _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-                  _vm._v("Home "),
+                  _vm._v("Acasa "),
                   _c("span", { staticClass: "sr-only" }, [_vm._v("(current)")])
                 ])
               ]),
@@ -37664,7 +37683,7 @@ var staticRenderFns = [
                       "aria-expanded": "false"
                     }
                   },
-                  [_vm._v("\n            Dropdown\n            ")]
+                  [_vm._v("\n                Ordonatori\n                ")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -37677,59 +37696,154 @@ var staticRenderFns = [
                     _c(
                       "a",
                       { staticClass: "dropdown-item", attrs: { href: "#" } },
-                      [_vm._v("Action")]
+                      [_vm._v("Adaugare")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "dropdown-item",
+                        attrs: { href: "/ordonatori" }
+                      },
+                      [_vm._v("Vizualizare")]
                     ),
                     _vm._v(" "),
                     _c(
                       "a",
                       { staticClass: "dropdown-item", attrs: { href: "#" } },
-                      [_vm._v("Another action")]
-                    ),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "dropdown-divider" }),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      { staticClass: "dropdown-item", attrs: { href: "#" } },
-                      [_vm._v("Something else here")]
+                      [_vm._v("Radiere")]
                     )
                   ]
                 )
               ]),
               _vm._v(" "),
-              _c("li", { staticClass: "nav-item" }, [
+              _c("li", { staticClass: "nav-item dropdown" }, [
                 _c(
                   "a",
                   {
-                    staticClass: "nav-link disabled",
+                    staticClass: "nav-link dropdown-toggle",
                     attrs: {
                       href: "#",
-                      tabindex: "-1",
-                      "aria-disabled": "true"
+                      id: "navbarDropdown",
+                      role: "button",
+                      "data-toggle": "dropdown",
+                      "aria-haspopup": "true",
+                      "aria-expanded": "false"
                     }
                   },
-                  [_vm._v("Disabled")]
+                  [
+                    _vm._v(
+                      "\n                Institutii Publice\n                "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "dropdown-menu",
+                    attrs: { "aria-labelledby": "navbarDropdown" }
+                  },
+                  [
+                    _c(
+                      "a",
+                      { staticClass: "dropdown-item", attrs: { href: "#" } },
+                      [_vm._v("Adaugare")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "dropdown-item",
+                        attrs: { href: "/institutii" }
+                      },
+                      [_vm._v("Vizualizare")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      { staticClass: "dropdown-item", attrs: { href: "#" } },
+                      [_vm._v("Radiere")]
+                    )
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "nav-item dropdown" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link dropdown-toggle",
+                    attrs: {
+                      href: "#",
+                      id: "navbarDropdown",
+                      role: "button",
+                      "data-toggle": "dropdown",
+                      "aria-haspopup": "true",
+                      "aria-expanded": "false"
+                    }
+                  },
+                  [_vm._v("\n                Angajati\n                ")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "dropdown-menu",
+                    attrs: { "aria-labelledby": "navbarDropdown" }
+                  },
+                  [
+                    _c(
+                      "a",
+                      { staticClass: "dropdown-item", attrs: { href: "#" } },
+                      [_vm._v("Militari")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      { staticClass: "dropdown-item", attrs: { href: "#" } },
+                      [_vm._v("Politisti")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      { staticClass: "dropdown-item", attrs: { href: "#" } },
+                      [_vm._v("Medici")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      { staticClass: "dropdown-item", attrs: { href: "#" } },
+                      [_vm._v("Personal Contractual")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      { staticClass: "dropdown-item", attrs: { href: "#" } },
+                      [_vm._v("Functionari publici")]
+                    )
+                  ]
                 )
               ])
             ]),
             _vm._v(" "),
-            _c("form", { staticClass: "form-inline my-2 my-lg-0" }, [
-              _c("input", {
-                staticClass: "form-control mr-sm-2",
-                attrs: {
-                  type: "search",
-                  placeholder: "Search",
-                  "aria-label": "Search"
-                }
-              }),
+            _c("div", [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-outline-primary my-2 my-sm-0",
+                  attrs: { type: "submit" }
+                },
+                [_vm._v("Acces")]
+              ),
               _vm._v(" "),
               _c(
                 "button",
                 {
-                  staticClass: "btn btn-outline-success my-2 my-sm-0",
+                  staticClass: "btn btn-outline-warning my-2 my-sm-0",
                   attrs: { type: "submit" }
                 },
-                [_vm._v("Search")]
+                [_vm._v("Solicitare Acces")]
               )
             ])
           ]

@@ -23,7 +23,7 @@ class CreateOrdonatoriTable extends Migration
 
 
             // Foreign Key Constraints
-            $table->foreign('act_infiintare')->references('id')->on('tipuri_acte')->onDelete('cascade');
+            $table->foreign('act_infiintare')->references('id')->on('acte')->onDelete('cascade');
         });
     }
 

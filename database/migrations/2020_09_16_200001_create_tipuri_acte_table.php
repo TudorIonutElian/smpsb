@@ -15,9 +15,10 @@ class CreateTipuriActeTable extends Migration
     {
         Schema::create('tipuri_acte', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->unsignedBigInteger('emitent_id');
             $table->string('titulatura', 50);
+            $table->date('data_legiferare');
+            $table->date('data_abrogare');
             $table->boolean('stare');
 
             // Foreign Key Constraints
