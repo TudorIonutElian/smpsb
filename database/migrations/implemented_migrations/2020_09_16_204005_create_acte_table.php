@@ -22,7 +22,6 @@ class CreateActeTable extends Migration
             $table->date('data_abrogare');
             $table->string('titulatura');
 
-
             // Foreign Key Constraints
             $table->foreign('tip_act')->references('id')->on('tipuri_acte')->onDelete('cascade');
             $table->foreign('emitent')->references('id')->on('emitenti')->onDelete('cascade');
