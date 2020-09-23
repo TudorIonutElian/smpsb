@@ -16,33 +16,17 @@ Vue.use(VueRouter)
 
 import Home from './components/ExampleComponent.vue';
 import About from './components/AboutComponent.vue';
+import Emitenti from './components/EmitentiComponent.vue';
 
 const router = new VueRouter({
   mode: 'history',
   base: __dirname,
   routes: [
     { path: '/', component: Home },
-    { path: '/about', component: About}
+    { path: '/about', component: About},
+    { path: '/emitenti', component: Emitenti}
   ]
 });
-
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
-
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('top-menu', require('./components/Menus/TopMenu.vue').default);
-Vue.component('about', require('./components/AboutComponent.vue').default);
-
-
-
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
