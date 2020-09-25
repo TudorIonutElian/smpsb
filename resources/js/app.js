@@ -17,6 +17,8 @@ Vue.use(VueRouter)
 import Home from './components/ExampleComponent.vue';
 import About from './components/AboutComponent.vue';
 import Emitenti from './components/EmitentiComponent.vue';
+import EmitentiAdaugare from './components/Emitenti/EmitentAdaugare.vue';
+import TipuriActe from './components/Acte/Acte';
 
 const router = new VueRouter({
   mode: 'history',
@@ -24,7 +26,9 @@ const router = new VueRouter({
   routes: [
     { path: '/', component: Home },
     { path: '/about', component: About},
-    { path: '/emitenti', component: Emitenti}
+    { path: '/emitenti', component: Emitenti},
+    { path: '/emitenti-adaugare', component: EmitentiAdaugare},
+    { path: '/acte', component: TipuriActe}
   ]
 });
 

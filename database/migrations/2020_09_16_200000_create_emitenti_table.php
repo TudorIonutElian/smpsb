@@ -16,7 +16,7 @@ class CreateEmitentiTable extends Migration
         Schema::create('emitenti', function (Blueprint $table) {
             $table->id();
             $table->string('denumire', 100);
-            $table->boolean('stare');
+            $table->integer('stare');
         });
     }
 

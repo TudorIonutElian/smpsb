@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Emitenti extends Model
 {
-    use HasFactory;
     protected $table = 'emitenti';
+    public $timestamps = false;
 }

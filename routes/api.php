@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Ordonatori;
 use App\Http\Controllers\EmitentiController;
+use App\Http\Controllers\TipuriActeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +26,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/ordonatori', [Ordonatori::class, 'index']);
 
 // Emitenti Controller
+Route::get('emitenti', [EmitentiController::class, 'index']);
+Route::post('emitenti-adaugare', [EmitentiController::class, 'adaugare']);
 
-Route::get('/emitenti', [EmitentiController::class, 'index']);
+// Tipuri Acte Controller
+Route::get('tipuri-acte', [TipuriActeController::class, 'index']);

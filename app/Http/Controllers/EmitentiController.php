@@ -14,6 +14,15 @@ class EmitentiController extends Controller
 {
     public function index(){
         return EmitentiCollection::collection(Emitenti::all());
-        //return Emitenti::all();
+    }
+    public function adaugare(Request $request){
+        $emitent = new Emitenti;
+        $emitent->denumire = $request->denumire;
+        $emitent->stare = 1;
+        $emitent->save();
+
+        return response()->json([
+            'mesaj' => true
+        ], 200);
     }
 }

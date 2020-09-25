@@ -8,20 +8,29 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Acasa <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/">Acasa <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Emitenti
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Adaugare</a>
-                        <a href="/ordonatori" class="dropdown-item">Vizualizare</a>
+                        <a href="/emitenti-adaugare" class="dropdown-item">Adaugare</a>
+                        <a href="/emitenti" class="dropdown-item">Vizualizare</a>
                         <a class="dropdown-item" href="#">Radiere</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Acte
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a href="acte-adaugare" class="dropdown-item">Adaugare</a>
+                        <a href="/acte" class="dropdown-item">Vizualizare</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#"  role="button" data-toid="navbarDropdown"ggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Ordonatori
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -31,7 +40,7 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Institutii Publice
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -41,7 +50,7 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Angajati
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -53,7 +62,7 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Situatii profesionale
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -64,7 +73,7 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Situatii financiare
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -78,7 +87,7 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Emitere documente
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -97,6 +106,6 @@
 
 <script>
     export default {
-        
+
     }
 </script>

@@ -15,11 +15,11 @@ class CreateActeTable extends Migration
     {
         Schema::create('acte', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('emitent');
             $table->unsignedBigInteger('tip_act');
+            $table->unsignedBigInteger('emitent');
             $table->boolean('stare');
             $table->date('data_legiferare');
-            $table->date('data_abrogare');
+            $table->date('data_abrogare')->nullable();
             $table->string('titulatura');
 
             // Foreign Key Constraints

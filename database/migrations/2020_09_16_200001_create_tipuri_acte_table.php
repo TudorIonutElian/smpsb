@@ -15,14 +15,7 @@ class CreateTipuriActeTable extends Migration
     {
         Schema::create('tipuri_acte', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('emitent_id');
             $table->string('titulatura', 50);
-            $table->date('data_legiferare');
-            $table->date('data_abrogare');
-            $table->boolean('stare');
-
-            // Foreign Key Constraints
-            $table->foreign('emitent_id')->references('id')->on('emitenti')->onDelete('cascade');
         });
     }
 
@@ -33,8 +26,7 @@ class CreateTipuriActeTable extends Migration
      */
     public function down()
     {
-        Schema::dropForeign('tipuri_acte_emitent_id_foreign');
         Schema::dropIfExists('tipuri_acte');
-        
+
     }
 }
