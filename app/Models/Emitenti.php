@@ -9,4 +9,8 @@ class Emitenti extends Model
 {
     protected $table = 'emitenti';
     public $timestamps = false;
+
+    public function getActe(){
+        return $this->hasMany('App\Models\Acte', 'emitent', 'id');
+    }
 }
