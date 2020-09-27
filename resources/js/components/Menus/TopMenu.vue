@@ -17,7 +17,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a href="/emitenti-adaugare" class="dropdown-item">Adaugare</a>
                         <a href="/emitenti" class="dropdown-item">Vizualizare</a>
-                        <a class="dropdown-item" href="#">Radiere</a>
+                        <a class="dropdown-item" href="/emitenti-radiere">Radiere</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -30,7 +30,7 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#"  role="button" data-toid="navbarDropdown"ggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#"  role="button" data-toid="navbarDropdown" aria-haspopup="true" aria-expanded="false">
                     Ordonatori
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">

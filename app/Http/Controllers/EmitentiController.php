@@ -11,10 +11,8 @@ use App\Models\Emitenti;
 // Importing Resources
 use App\Http\Resources\ActeEmitentCollection;
 use App\Http\Resources\EmitentiCollection;
-
-
+use App\Models\IstoricRadieri;
 use Illuminate\Support\Facades\DB;
-use Laravel\Ui\Presets\React;
 
 class EmitentiController extends Controller
 {
@@ -47,12 +45,27 @@ class EmitentiController extends Controller
     // Radiere emitent
     public function radiere(Request $request)
     {
+        // Identificare Emitent in baza id-ului
         $emitent_id = $request->emitentSelectat;
         $emitent = Emitenti::find($emitent_id);
+
         // Radiere
         $emitent->data_incheiere_activitate = $request->data_radiere;
         $emitent->stare = 0;
         $emitent->save();
-        return $emitent;
+
+
+        $istoricRadiere = new IstoricRadieri;
+        $istoricRadiere->emitent        = $request->emitentSelectat;
+        $istoricRadiere->data_radiere   = $request->data_radiere;
+        $istoricRadiere->save();
+
+        
+        // Returnare mesaj ok
+        return response()->json([
+            'mesaj' => 'Emitentul a fost radiat! Operatiunea a fost salvata in istoric!',
+            'radiere' => true
+        ], 200);
+
     }
 }

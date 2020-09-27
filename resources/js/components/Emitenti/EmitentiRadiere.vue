@@ -2,7 +2,12 @@
   <div>
     <top-nav></top-nav>
     <div class="container mt-3">
-      <div class="row">
+      <div v-if="!emitenti" class="row">
+        <div class="col-12 text-center">
+          <loading></loading>
+        </div>
+      </div>
+      <div v-else class="row">
         <div class="col-12 my-2">
           <div class="form-group">
             <label for="emitent">Selectati Emitentul</label>
@@ -11,7 +16,6 @@
               class="form-control"
               v-model="emitentSelectat"
             >
-              <option selected>Alegeti tipul actului...</option>
               <option
                 v-for="emitent in emitenti"
                 :key="emitent.id"
@@ -34,12 +38,14 @@
 
 <script>
 import TopNav from "../Menus/TopMenu.vue";
+import Loading from '../Animations/Loading.vue';
 export default {
   data() {
     return {
       emitenti: [],
       emitentSelectat: null,
-      data_radiere: null
+      data_radiere: null,
+      status_radiere: null
     };
   },
   created() {
@@ -55,7 +61,9 @@ export default {
                     data_radiere: this.data_radiere
                     })
                     .then((response) =>{
-                        console.log(response)
+                        if(response.data.radiere){
+                          console.log(response);
+                        }
                     }).catch(function (error) {
                         console.log(error);
                     });
@@ -63,6 +71,7 @@ export default {
   },
   components: {
     TopNav,
+    Loading
   },
 };
 </script>

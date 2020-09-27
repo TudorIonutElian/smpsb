@@ -18,7 +18,7 @@ class EmitentiCollection extends JsonResource
             'id'                                    =>$this->id,
             'denumire'                              =>$this->denumire,
             'data_incepere_activitate'              =>$this->data_incepere_activitate,
-            'data_sfarsit_activitate'               =>$this->data_sfarsit_activitate,
+            'data_sfarsit_activitate'               =>$this->data_incheiere_activitate,
             'stare'                                 =>$this->stare,
             'numar_acte'                            =>count($this->getActe)
         ];
