@@ -20,7 +20,7 @@
                         <div class="form-group row">
                             <label for="dataIncepereActivitate" class="col-sm-2 col-form-label">Incepere activitate</label>
                             <div class="col-sm-10">
-                            <input v-model="dataIncepereActivitate" type="text" class="form-control" id="dataIncepereActivitate" placeholder="Introuduceti data de incepere a activitatii">
+                            <input v-model="dataIncepereActivitate" type="date" class="form-control" id="dataIncepereActivitate" placeholder="Introuduceti data de incepere a activitatii">
                             </div>
                         </div>
                         <button @click="adaugareEmitent" class="btn btn-lg btn-outline-primary">Adaugare Emitent</button>
@@ -44,7 +44,10 @@
         methods:{
             adaugareEmitent(event){
                 event.preventDefault();
-                axios.post('api/emitenti-adaugare', {denumire: this.denumireEmitent})
+                axios.post('api/emitenti-adaugare', {
+                    denumire: this.denumireEmitent,
+                    dataIncepereActivitate: this.dataIncepereActivitate
+                    })
                     .then((response) =>{
                         if(response.data.mesaj){
                             setTimeout(()=>{

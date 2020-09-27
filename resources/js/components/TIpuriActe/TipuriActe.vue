@@ -8,10 +8,10 @@
         <div class="row">
             <div class="container">
                 <div class="row">
-                    <div v-for="act in acte" :key="act.id" class="col-12 my-3">
-                       <div>ID Act normativ:  {{ act.id }}</div>
-                       <div>Data legiferare:  {{ act.data_legiferare }}</div>
-                       <div>Emitent: {{ act.emitent}}</div>
+                    <div class="col-12 my-2">
+                        <select name="tipDeAct" id="">
+                            <option v-for="tipAct in tipurActe" value="tipAct.id">{{ tipAct.titulatura}}</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -24,11 +24,14 @@
     export default {
         data() {
             return {
-                acte: []
+                tipurActe: []
             };
         },
         created(){
-            axios.get('/api/acte').then((response)=> this.acte = response.data.data);
+            axios.get('/api/tipuri-acte')
+            .then((response) => {
+                this.tipurActe = response.data.data;
+            })
         },
         components: {
             TopNav

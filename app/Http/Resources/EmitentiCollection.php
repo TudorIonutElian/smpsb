@@ -15,9 +15,12 @@ class EmitentiCollection extends JsonResource
     public function toArray($request)
     {
         return [
-            'id'            =>$this->id,
-            'denumire'      =>$this->denumire,
-            'stare'         =>$this->stare,
+            'id'                                    =>$this->id,
+            'denumire'                              =>$this->denumire,
+            'data_incepere_activitate'              =>$this->data_incepere_activitate,
+            'data_sfarsit_activitate'               =>$this->data_sfarsit_activitate,
+            'stare'                                 =>$this->stare,
+            'numar_acte'                            =>count($this->getActe)
         ];
     }
 }

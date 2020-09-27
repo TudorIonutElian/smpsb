@@ -16,9 +16,27 @@ Vue.use(VueRouter)
 
 import Home from './components/ExampleComponent.vue';
 import About from './components/AboutComponent.vue';
-import Emitenti from './components/EmitentiComponent.vue';
+
+/*************************
+** Import for Emitenti ***
+*************************/
+
+import Emitenti from './components/Emitenti/Emitenti.vue';
 import EmitentiAdaugare from './components/Emitenti/EmitentAdaugare.vue';
-import TipuriActe from './components/Acte/Acte';
+import EmitentActe from './components/Emitenti/EmitentActe.vue';
+import EmitentiRadiere from './components/Emitenti/EmitentiRadiere.vue';
+
+/****************************
+*** Import for TipuriActe ***
+****************************/
+import TipuriActe from './components/TipuriActe/TipuriActe';
+
+/****************************
+*** Import for Acte       ***
+****************************/
+import Acte from './components/Acte/Acte';
+import ActeAdaugare from './components/Acte/ActeAdaugare.vue';
+
 
 const router = new VueRouter({
   mode: 'history',
@@ -26,9 +44,19 @@ const router = new VueRouter({
   routes: [
     { path: '/', component: Home },
     { path: '/about', component: About},
+
+    // Routes pentru EMITENTI
     { path: '/emitenti', component: Emitenti},
+    { path: '/emitenti/:id/acte', component: EmitentActe},
     { path: '/emitenti-adaugare', component: EmitentiAdaugare},
-    { path: '/acte', component: TipuriActe}
+    { path: '/emitenti-radiere', component: EmitentiRadiere},
+
+
+    { path: '/tipuri-acte', component: TipuriActe},
+
+    // Routes pentru ACTR
+    { path: '/acte', component: Acte},
+    { path: '/acte-adaugare', component: ActeAdaugare}
   ]
 });
 

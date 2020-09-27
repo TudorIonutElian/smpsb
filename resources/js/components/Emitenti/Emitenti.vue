@@ -15,12 +15,12 @@
           <div class="col-12">
             <div class="container">
               <div v-if="emitenti.length === 0" class="row">
-                  <div class="col-12 mt-2 py-2 bg-warning rounded">
+                  <div class="col-12 mt-2 p-3 bg-warning rounded">
                       In prezent nu exista niciun Emitent in baza de date! Va rugam sa <a href="/emitenti-adaugare">adaugati</a> Emitenti pentru a putea inrola institutii!
                   </div>
               </div>
                 <div v-else class="row">
-                    <div class="col-12 mt-2 py-2 bg-primary text-white rounded">
+                    <div class="col-12 mt-2 py-2 bg-secondary text-white rounded">
                         Pagina Emitentilor de acte normative
                     </div>
                     <div class="row my-2">
@@ -29,6 +29,9 @@
                             :id="emitent.id"
                             :key="emitent.id"
                             :stare="emitent.stare"
+                            :acte="emitent.numar_acte"
+                            :data_incepere_activitate="emitent.data_incepere_activitate"
+                            :data_sfarsit_activitate="emitent.data_sfarsit_activitate"
                             v-for="emitent in emitenti">
                         </emitent>
                     </div>
@@ -40,8 +43,8 @@
 </template>
 
 <script>
-  import TopNav from './Menus/TopMenu.vue'
-  import Emitent from './Emitenti/Emitent.vue'
+  import TopNav from '../Menus/TopMenu.vue'
+  import Emitent from './Emitent.vue'
 
   import axios from 'axios';
 
